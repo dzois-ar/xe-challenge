@@ -44,47 +44,55 @@ git clone https://github.com/<YOUR_USERNAME>/xe-challenge.git
 cd xe-challenge
 
 ### Windows (PowerShell)
+```bash
 git clone https://github.com/<YOUR_USERNAME>/xe-challenge.git
 cd xe-challenge
 
 
-### Install dependencies 
+## Install dependencies 
 
 From the repository root:
+
+```bash
 npm install
 
-### Backend env :
+## Backend env :
 apps/api/.env
 
-### Run the database (PostgreSQL in Docker)
+## Run the database (PostgreSQL in Docker)
 From the repository root:
 
+```bash
 docker compose up -d
 
-Check containers:
+## Check containers:
 
+```bash
 docker ps
 
 
-### Run backend (Express API)
+## Run backend (Express API)
 - Open a terminal:
 
 cd apps/api
+```bash
 npm run dev
 
-- Health check:
+### Health check:
 curl http://localhost:4000/health
 
 
-### Run frontend 
+## Run frontend 
 
-Open a second terminal:
+### Open a second terminal:
 
 cd apps/web
+
+```bash
 npm run dev
 
 
-Open:
+### Open:
 
 Frontend: http://localhost:5173
 
@@ -92,20 +100,22 @@ Frontend: http://localhost:5173
 
 Open http://localhost:5173
 
-In Area field type at least 3 characters → should load suggestions
+In Area field type at least 3 characters → should load suggestions/
 
-Select a suggestion (stores placeId)
+Select a suggestion (stores placeId)/
 
-Fill the form and submit → backend persists the ad in Postgres
+Fill the form and submit → backend persists the ad in Postgres/
 
-(Optional) If a details page exists, it loads the ad by id.
+(Optional) If a details page exists, it loads the ad by id./
 
 
-### Verify DB insert manually 
-Enter psql inside the docker container:
+## Verify DB insert manually 
 
+## Enter psql inside the docker container:
+
+```bash
 docker exec -it xe_pg psql -U xe -d xe_challenge
 
--List rows:
-
+## List rows:
+```bash
 SELECT id, title, type, area_place_id, area_label, price, created_at FROM ads ORDER BY id DESC;
