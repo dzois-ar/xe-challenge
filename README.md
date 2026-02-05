@@ -74,6 +74,14 @@ docker compose up -d
 docker ps
 ```
 
+## Run DB migrations
+
+### From the repository root:
+
+```bash
+cd apps/api
+npm run db:migrate
+```
 
 ## Run backend (Express API)
 - Open a terminal:
@@ -81,14 +89,6 @@ docker ps
 cd apps/api
 ```bash
 npm run dev
-```
-### Run DB migrations
-
-## From the repository root:
-
-```bash
-cd apps/api
-npm run db:migrate
 ```
 
 ### Health check:
