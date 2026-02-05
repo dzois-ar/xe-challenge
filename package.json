@@ -1,0 +1,12 @@
+{
+  "name": "xe-challenge",
+  "private": true,
+  "workspaces": [
+    "apps/api",
+    "apps/web",
+    "packages/shared"
+  ],
+  "dependencies": {
+    "20": "^3.1.9"
+  }
+}

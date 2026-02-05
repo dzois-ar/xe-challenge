@@ -1,0 +1,22 @@
+
+
+services:
+  db:
+    image: postgres:16
+    container_name: xe_pg
+    environment:
+      POSTGRES_USER: xe
+      POSTGRES_PASSWORD: xe_password
+      POSTGRES_DB: xe_challenge
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - xe_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U xe -d xe_challenge"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  xe_pg_data:
