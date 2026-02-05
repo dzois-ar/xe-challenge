@@ -82,6 +82,14 @@ cd apps/api
 ```bash
 npm run dev
 ```
+### Run DB migrations
+
+## From the repository root:
+
+```bash
+cd apps/api
+npm run db:migrate
+```
 
 ### Health check:
 curl http://localhost:4000/health
