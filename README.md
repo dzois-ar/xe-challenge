@@ -42,12 +42,13 @@ README.md
 ```bash
 git clone https://github.com/<YOUR_USERNAME>/xe-challenge.git
 cd xe-challenge
+```
 
 ### Windows (PowerShell)
 ```bash
 git clone https://github.com/<YOUR_USERNAME>/xe-challenge.git
 cd xe-challenge
-
+```
 
 ## Install dependencies 
 
@@ -55,6 +56,7 @@ From the repository root:
 
 ```bash
 npm install
+```
 
 ## Backend env :
 apps/api/.env
@@ -64,11 +66,13 @@ From the repository root:
 
 ```bash
 docker compose up -d
+```
 
 ## Check containers:
 
 ```bash
 docker ps
+```
 
 
 ## Run backend (Express API)
@@ -77,6 +81,7 @@ docker ps
 cd apps/api
 ```bash
 npm run dev
+```
 
 ### Health check:
 curl http://localhost:4000/health
@@ -90,6 +95,7 @@ cd apps/web
 
 ```bash
 npm run dev
+```
 
 
 ### Open:
@@ -115,7 +121,9 @@ Fill the form and submit → backend persists the ad in Postgres/
 
 ```bash
 docker exec -it xe_pg psql -U xe -d xe_challenge
+```
 
 ## List rows:
 ```bash
 SELECT id, title, type, area_place_id, area_label, price, created_at FROM ads ORDER BY id DESC;
+```
