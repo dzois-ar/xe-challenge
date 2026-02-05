@@ -1,0 +1,71 @@
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Node / Package managers
+# =========================
+node_modules/
+**/node_modules/
+
+# If you want to commit lock file, keep package-lock.json.
+# Usually you SHOULD commit it. So we do NOT ignore it.
+# package-lock.json
+
+# =========================
+# Env files (secrets)
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Build outputs
+# =========================
+dist/
+**/dist/
+build/
+**/build/
+out/
+**/out/
+coverage/
+**/coverage/
+
+# =========================
+# Vite / React
+# =========================
+.vite/
+**/.vite/
+*.local
+
+# =========================
+# Docker
+# =========================
+# Local docker volumes are not in repo, but ignore any accidental dumps
+*.tar
+*.gz
+
+# =========================
+# Misc
+# =========================
+tmp/
+temp/
